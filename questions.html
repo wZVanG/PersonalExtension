@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="stackoverflow">
+<head>
+	<title>Stackoverflow JavaScript Questions</title>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/questions.js"></script>
+	<link rel="stylesheet" href="css/questions.css">
+</head>
+<body ng-controller="Questions">
+<h4>Questions: </h4>
+	<div id="questions">
+		<div ng-repeat="question in questions">
+			<div><b>{{question.title}}</b></div>
+
+		</div>
+	</div>
+<body>
+</html>
