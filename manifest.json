@@ -1,25 +1,49 @@
 {
   "name": "VanG Extension",
-  "version": "1.0",
+  "version": "2.0",
   "manifest_version": 2,
-  "description": "Extension personal (Utilidads) - Walter German Chapilliquen Zeta - facebook/wzvang",
-   "browser_action": {
-	"default_popup": "popup.html",
+  "description": "Extension personal (Utilidads) - Walter German Chapilliquen Zeta - github.com/wZVanG",
+  "browser_action": {
+    "default_popup": "popup.html",
     "default_icon": "32.png"
   },
-   "permissions": ["tabs","activeTab", "management", "webRequest", "webRequestBlocking", "notifications", "<all_urls>"],
-   "background": { "page": "background.html", "persistent" : true },
-"content_scripts": [
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "management",
+    "webRequest",
+    "webRequestBlocking",
+    "notifications",
+    "<all_urls>"
+  ],
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
+  "content_scripts": [
     {
-      "matches": ["*://*/*"],
-      "js": ["js/jquery.js","js/library.js","VanG.js"],
-	  "run_at": "document_start"
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "js/jquery.js",
+        "js/library.js",
+        "VanG.js"
+      ],
+      "run_at": "document_start"
     }
   ],
   "web_accessible_resources": [
-     "img/*"
+    "img/*"
   ],
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-  "icons": {"16": "16.png", "32": "32.png", "48": "48.png", "64": "64.png", "128": "128.png", "256": "256.png"},
-  "homepage_url" : "http://www.facebook.com/wzvang"
+  "icons": {
+    "16": "16.png",
+    "32": "32.png",
+    "48": "48.png",
+    "64": "64.png",
+    "128": "128.png",
+    "256": "256.png"
+  },
+  "homepage_url": "https://github.com/wZVanG"
 }
